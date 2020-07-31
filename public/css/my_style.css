@@ -1,0 +1,233 @@
+body
+{
+    overflow: hidden;
+}
+
+.radio-container 
+{
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    cursor: pointer;
+    z-index: 999;
+    margin-bottom: 38px;
+}
+
+.radio-container input[type="radio"] 
+{
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-container .gender-radio 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    font-family: Roboto;
+    color: #787878;
+    border-radius: 6px;
+}
+
+.radio-container input:checked ~ .gender-radio 
+{
+    background: orange;
+    color: #fff;
+}
+
+
+.post-options_block
+{
+    display: flex; 
+    -ms-flex-align: center; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+._modal_group
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 21, 31, 0.96);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100000;
+    transition: opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+.login_modal,
+.sign_up_modal
+{
+    position: absolute;
+    z-index: 100001;
+    transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;
+    margin: 0!important;
+}
+
+
+.login_sign_up_style
+{
+    display: flex; 
+    -ms-flex-align: center; 
+    align-items: center; 
+    justify-content: center!important; 
+    background-color: #1a1d26; 
+    box-shadow: 3px 5px 20px 0 rgba(0,0,0,.1); 
+    border-bottom-left-radius: 12px; 
+    border-bottom-right-radius: 12px; 
+    width: 160px; height: 44px; 
+    border-radius: 12px; 
+    cursor: pointer; 
+    transition: box-shadow .2s ease-in-out,background-color .2s ease-in-out;
+    padding: 18px;
+}
+
+.log_sin 
+{
+    background: #1a1d26;
+    justify-content: center!important; 
+    box-shadow: 3px 5px 20px 0 rgba(0,0,0,.1); 
+    margin: 10px auto;
+}
+
+.login_sign_up_style:hover,
+.post-option:hover 
+{
+    background: #40d04f;
+}
+
+
+.errors_p
+{
+    padding: 0 10px 20px;
+}
+
+.error_global,
+.group_title_language,
+.add_tage_show
+
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+
+.group_add_tag .add_tag,
+.group_title_language
+{
+    padding: 0 15px 15px;
+}
+
+.post_title_parent
+{
+    width: 78%;
+}
+
+.tag_url_parent
+{
+    width: 50%;
+}
+
+.tag_title_parent
+{
+    width: 48%;
+    margin-left: 2%;
+}
+
+.post_language_parent
+{
+    width: 20%;
+    margin-left: 2%;
+}
+
+.language_svg
+{
+    right: 15%!important;
+}
+
+
+.svg_error
+{
+    width: 38px;
+    height: 38px;
+}
+
+.notification_error
+{
+    height: 16%;
+    width: 16%;
+    right: 5px;
+    bottom: 5px;
+    position: fixed;
+    background: #1d2333;
+    z-index: 100000;
+}
+
+.notification_error h4
+{
+    margin-left: 5%;
+}
+
+.notifi
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.notifi_div
+{
+    background: #2d3549;
+    height: 5px;
+}
+
+.notifi_p
+{
+    width: 100%;
+    height: 5px;
+    background: #dd0000;
+}
+
+
+.post-images
+{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 0;
+    padding: 10px 20px;
+    border-top: 1px solid #2f3749;
+}
+
+.post-images .img
+{
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: 1px solid #7750f8;
+}
+
+.post_photo_remove
+{
+    cursor: pointer;
+}
