@@ -13,6 +13,10 @@ class Posts extends Model
     }
 
     public function post_photo(){
-    	return $this->hasMany("App\Photo", "post_id","idgit ");
+    	return $this->hasMany("App\Photo", "post_id","id");
+    }
+
+    public function post_limit(){
+        return $this->hasMany("App\Photo", "post_id","id")->limit(2);
     }
 }

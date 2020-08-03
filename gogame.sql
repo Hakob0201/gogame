@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : hv
+ Source Server         : edgar
  Source Server Type    : MySQL
  Source Server Version : 100411
  Source Host           : localhost:3306
@@ -11,11 +11,54 @@
  Target Server Version : 100411
  File Encoding         : 65001
 
- Date: 30/07/2020 00:35:02
+ Date: 01/08/2020 08:42:09
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for comment
+-- ----------------------------
+DROP TABLE IF EXISTS `comment`;
+CREATE TABLE `comment`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `post_id` int(11) NULL DEFAULT NULL,
+  `text` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `updated_at` timestamp(0) NULL DEFAULT NULL,
+  `created_at` timestamp(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `post_id`(`post_id`) USING BTREE,
+  CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of comment
+-- ----------------------------
+INSERT INTO `comment` VALUES (7, 12, 'sdfdsf', '2020-08-01 03:55:52', '2020-08-01 03:55:52');
+INSERT INTO `comment` VALUES (8, 12, 'sdfsdfs', '2020-08-01 04:14:51', '2020-08-01 04:14:51');
+
+-- ----------------------------
+-- Table structure for like
+-- ----------------------------
+DROP TABLE IF EXISTS `like`;
+CREATE TABLE `like`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `post_id` int(11) NULL DEFAULT NULL,
+  `user_id` int(11) NULL DEFAULT NULL,
+  `smailes` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `updated_at` timestamp(0) NULL DEFAULT NULL,
+  `created_at` timestamp(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `post_id`(`post_id`) USING BTREE,
+  INDEX `user_id`(`user_id`) USING BTREE,
+  CONSTRAINT `like_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `like_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of like
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for photo
@@ -75,13 +118,20 @@ CREATE TABLE `posts`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
   CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of posts
 -- ----------------------------
 INSERT INTO `posts` VALUES (11, NULL, 'fdgdfg', 'dfgdfgdfgdfgdf', 'am', '2020-07-29 23:21:03', 'public', '2020-07-29 19:21:03', '2020-07-29 19:21:03');
 INSERT INTO `posts` VALUES (12, 1, 'fdgdfg', 'dfgdfgdfgdfgdf', 'am', '2020-07-29 23:21:57', 'public', '2020-07-29 19:21:57', '2020-07-29 19:21:57');
+INSERT INTO `posts` VALUES (13, 1, NULL, NULL, 'am', '2020-07-31 22:20:02', 'public', '2020-07-31 18:20:02', '2020-07-31 18:20:02');
+INSERT INTO `posts` VALUES (14, 1, NULL, NULL, 'am', '2020-07-31 22:37:40', 'public', '2020-07-31 18:37:40', '2020-07-31 18:37:40');
+INSERT INTO `posts` VALUES (15, 1, NULL, NULL, 'am', '2020-07-31 22:42:40', 'public', '2020-07-31 18:42:40', '2020-07-31 18:42:40');
+INSERT INTO `posts` VALUES (16, 1, NULL, NULL, 'am', '2020-08-01 01:55:49', 'public', '2020-07-31 21:55:48', '2020-07-31 21:55:48');
+INSERT INTO `posts` VALUES (17, 1, NULL, NULL, 'am', '2020-08-01 01:55:50', 'public', '2020-07-31 21:55:50', '2020-07-31 21:55:50');
+INSERT INTO `posts` VALUES (18, 1, NULL, NULL, 'am', '2020-08-01 01:56:23', 'public', '2020-07-31 21:56:23', '2020-07-31 21:56:23');
+INSERT INTO `posts` VALUES (19, 1, NULL, NULL, 'am', '2020-08-01 01:57:04', 'public', '2020-07-31 21:57:04', '2020-07-31 21:57:04');
 
 -- ----------------------------
 -- Table structure for users

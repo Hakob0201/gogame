@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/vendor/tiny-slider.css') }}" />
     {{-- font awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    {{-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- favicon -->
     <link rel="icon" href="img/favicon.ico" />
@@ -37,10 +37,30 @@
 
     @show
 
+
+
+    <div class="notification"></div>
     <!-- js -->
     <script src="{{ asset('js/app.bundle.min.js') }}"></script>
 {{--    <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>--}}
     <script src="{{ asset('js/modal.js') }}"></script>
+
+    <!-- Class js -->
+    <script src="{{ asset('js/class.js') }}"></script>
+    <!-- /Class js -->
+
+    <!-- Posts js -->
+    <script src="{{ asset('js/posts.js') }}"></script>
+    <!-- /Posts js -->
+
+    <!-- Like js -->
+    <script src="{{ asset('js/like.js') }}"></script>
+    <!-- /Like js -->
+
+    <!-- Comment js -->
+    <script src="{{ asset('js/comment.js') }}"></script>
+    <!-- /Comment js -->
+
     <!-- google maps api -->
    {{--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASM8La_P3appMy1kalc0kIqNL6pxdUbSA&amp;callback=initMap" async defer></script> --}}
 </body>

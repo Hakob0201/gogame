@@ -153,7 +153,7 @@
         <!-- LANGUAGE SELECT -->
         <p class='errors_p'></p>
         <div class="form-select small">
-            <label for="items-filter-category">Language</label>
+            <label for="items-filter-category">Access limit</label>
             <select id="items-filter-category" class="access_limit"  value="">
                 <option value="my">Only I can see</option>
                 <option value="frends">Can only be seen by my friends</option>
@@ -179,13 +179,3 @@
     </div>
     <!-- /QUICK POST FOOTER -->
 </div>
-
-
-
-
-<!-- jQuery -->
-<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
-<!-- /jQuery -->
-<!-- Post js -->
-<script src="{{ asset('js/posts.js') }}"></script>
-<!-- /Post js -->

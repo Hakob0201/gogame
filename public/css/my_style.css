@@ -3,7 +3,7 @@ body
     overflow: hidden;
 }
 
-.radio-container 
+.radio-container
 {
     display: inline-block;
     position: relative;
@@ -13,13 +13,13 @@ body
     margin-bottom: 38px;
 }
 
-.radio-container input[type="radio"] 
+.radio-container input[type="radio"]
 {
     position: absolute;
     opacity: 0;
 }
 
-.radio-container .gender-radio 
+.radio-container .gender-radio
 {
     position: absolute;
     top: 0;
@@ -36,7 +36,7 @@ body
     border-radius: 6px;
 }
 
-.radio-container input:checked ~ .gender-radio 
+.radio-container input:checked ~ .gender-radio
 {
     background: orange;
     color: #fff;
@@ -45,9 +45,9 @@ body
 
 .post-options_block
 {
-    display: flex; 
-    -ms-flex-align: center; 
-    align-items: center; 
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -61,9 +61,9 @@ body
     top: 0px;
     left: 0px;
     z-index: 100000;
-    transition: opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; 
-    display: flex; 
-    align-items: center; 
+    transition: opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -80,31 +80,31 @@ body
 
 .login_sign_up_style
 {
-    display: flex; 
-    -ms-flex-align: center; 
-    align-items: center; 
-    justify-content: center!important; 
-    background-color: #1a1d26; 
-    box-shadow: 3px 5px 20px 0 rgba(0,0,0,.1); 
-    border-bottom-left-radius: 12px; 
-    border-bottom-right-radius: 12px; 
-    width: 160px; height: 44px; 
-    border-radius: 12px; 
-    cursor: pointer; 
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center!important;
+    background-color: #1a1d26;
+    box-shadow: 3px 5px 20px 0 rgba(0,0,0,.1);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 160px; height: 44px;
+    border-radius: 12px;
+    cursor: pointer;
     transition: box-shadow .2s ease-in-out,background-color .2s ease-in-out;
     padding: 18px;
 }
 
-.log_sin 
+.log_sin
 {
     background: #1a1d26;
-    justify-content: center!important; 
-    box-shadow: 3px 5px 20px 0 rgba(0,0,0,.1); 
+    justify-content: center!important;
+    box-shadow: 3px 5px 20px 0 rgba(0,0,0,.1);
     margin: 10px auto;
 }
 
 .login_sign_up_style:hover,
-.post-option:hover 
+.post-option:hover
 {
     background: #40d04f;
 }
@@ -230,4 +230,110 @@ body
 .post_photo_remove
 {
     cursor: pointer;
+}
+
+
+/* notification */
+
+
+.notification {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    top: auto;
+    right: auto;
+}
+
+.notification p {
+    margin: 0;
+    padding: 0;
+}
+.notification .btn {
+    padding: 16px 20px;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 12px;
+    align-items: center;
+    animation: fadeIn .4s ease-in;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.notification .btn::before {
+    margin-right: 12px;
+    font-family: 'fontawesome';
+    font-size: 15px;
+}
+.notification span {
+    margin-left: 10px;
+    cursor: pointer;
+    flex: 1;
+    text-align: right;
+}
+
+.notification .error {
+    background-color: #ECC8C5;
+    border: 1px solid #BD8181;
+}
+.notification .error span {
+    color: #C79995;
+}
+.notification .error::before {
+    content: '\f05c';
+    color: #B2312F;
+
+}
+.notification .success {
+    background-color: #DEF2D6;
+    border: 1px solid #B3CEA9;
+}
+.notification .success span {
+    color: #AFC7A7;
+}
+.notification .success::before {
+    content: '\f00c';
+    color: #5A7052;
+}
+
+/* notification styles end */
+
+
+/* countdown */
+.countdown {
+    font-size: 2.5rem;
+    /*margin-top: 20px;*/
+}
+/* countdown styles end */
+
+
+
+.sunduk
+{
+    background: #1d2333;
+    color: #45f3ff;
+    height: 200px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .5s;
+    padding: 32px 28px;
+    border-radius: 12px;
+    background-color: #1d2333;
+    box-shadow: 0 0 40px 0 rgba(0,0,0,.06);
+    position: relative;
+}
+
+.sunduk p
+{
+    font-size: 100px;
+    color: #45f3ff;
+}
+
+.countdown
+{
+    font-size: 24px !important;
+    color: #45f3ff !important;
 }

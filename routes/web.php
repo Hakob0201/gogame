@@ -31,3 +31,12 @@ Route::get('/account/verify/{hash}/{id}', "Sign_upController@verification");
 // <= =============== Add post =============== =>
 Route::post('/new_AddPost', 'PostsController@new_AddPost');
 
+// <= =============== Add comment =============== =>
+Route::post('/new_AddComment', 'CommentController@new_AddComment');
+
+// <= =============== Print comment =============== =>
+Route::post('/print_comment', 'CommentController@PrintComment');
+
+// <= =============== Add like =============== =>
+Route::post('/new_AddLike', 'LikeController@new_AddLike');
+
